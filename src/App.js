@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Navbar from "./componenets/Navbar/Navbar";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./componenets/Header/Header";
+import Players from "./componenets/Players/Players";
+import Footer from "./componenets/Footer/Footer";
+import ResponsiveNav from "./componenets/responsiveNav/ResponsiveNav";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+        const hideMenu = () => {
+            if (window.innerWidth > 760 && isOpen) {
+                setIsOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", hideMenu);
+
+        return () => {
+            window.removeEventListener("resize", hideMenu);
+        };
+    });
+    return (
+        <Router>
+            <Navbar toggle={toggle} />
+            <ResponsiveNav toggle={toggle} isOpen={isOpen} />
+            <Header />
+            <Players />
+            <Footer />
+        </Router>
+    );
 }
 
 export default App;
