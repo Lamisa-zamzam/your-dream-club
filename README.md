@@ -4,7 +4,7 @@
 
 This is a website for football teams to begin their journey in the world of football. You can build your club and add the players you want to your team. This project uses Tailwind CSS for designing and React.js for the structure. This is not completed yet.
 
-## [My Live site: https://still-sands-72654.herokuapp.com/](https://still-sands-72654.herokuapp.com/)
+## [My Live site: https://focused-jepsen-b4ecdb.netlify.app/](https://focused-jepsen-b4ecdb.netlify.app/)
 
 My project includes:
 
