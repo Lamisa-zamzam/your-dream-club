@@ -29,7 +29,7 @@ function App() {
         return () => {
             window.removeEventListener("resize", hideMenu);
         };
-    });
+    }, []);
     return (
         <Router>
             <Navbar toggle={toggle} />
