@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className="bg-white h-screen flex flex-col justify-center">
+        <div className="bg-white h-screen flex flex-col justify-center mt-20 mb-20">
             <h1 className="lg:text-9xl md-text-7xl sm:text-5xl text-3xl font-black mb-14">
                 Build Your Dream Football Club Today
             </h1>
-            <Link to="/" className="py-6 px-10 bg-blue-300 rounded-full text-3xl hover:bg-blue-500 transition duration-300 ease-in-out flex items-center animate-bounce w-max ml-5">
+            <Link
+                to="/"
+                className="py-6 px-10 bg-blue-300 rounded-full text-3xl hover:bg-blue-500 transition duration-300 ease-in-out flex items-center animate-bounce w-max ml-5"
+            >
                 Start Now
                 <svg
                     className="w-6 h-6 ml-4"
